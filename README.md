@@ -1,33 +1,56 @@
-📄 Project: U‑Net Implementation for Image Denoising
-Overview
-In this project, I implemented a U‑Net model to solve the problem of image denoising.
+# 🖼️ U‑Net for Image Denoising (CIFAR‑10 + Salt & Pepper Noise)
 
-I used the CIFAR‑10 dataset, which contains 60,000 RGB images with dimensions of 32×32 pixels.
+## 📌 Overview
+I developed a **U‑Net** deep learning model to remove **Salt & Pepper** noise from the **CIFAR‑10** dataset (60,000 RGB images, 32×32 px).  
+The model restores noisy images to clean, high‑quality outputs.
 
-I artificially added Salt & Pepper noise to the images so that the model could learn to remove it.
+---
 
-What I Did
-Data Preparation
+## 🛠 Steps I Took
 
-Downloaded and loaded the CIFAR‑10 dataset.
-Applied Salt & Pepper noise to create noisy versions of the images.
-Model Design & Implementation
+### 1️⃣ Data Preparation  
+- Loaded CIFAR‑10 dataset.  
+- Added Salt & Pepper noise to create noisy inputs.  
+- Split into training and testing sets.
 
-Coded the complete U‑Net architecture from scratch.
-Set noisy images as inputs and the original clean images as outputs.
-Training the Model
+### 2️⃣ Model Design  
+- Implemented the **U‑Net** architecture from scratch.  
+- Inputs: noisy images. Outputs: clean ground‑truth images.
 
-Trained the model using noisy–clean image pairs.
-Used MAE and MSE metrics to measure and minimize reconstruction errors.
-Evaluation
+### 3️⃣ Training  
+- Optimized using **MSE** and **MAE** loss functions.  
+- Trained on noisy–clean image pairs.  
+- Monitored loss values to ensure convergence.
 
-Ran the trained model on several test images.
-Compared the noisy input, denoised output, and ground truth images side‑by‑side.
-Plotted the loss curve, showing clear performance improvement over time.
-Results
-The model effectively removed Salt & Pepper noise.
-The reconstructed images were visually very close to the originals.
-Both MSE and MAE values were low, confirming strong model performance.
-Extras
-The full code, training process, data preprocessing steps, and visual results are included in this repository.
-The image comparison approach made the model’s performance evaluation clear and interpretable.
+### 4️⃣ Evaluation  
+- Tested on unseen noisy images.  
+- Compared **Noisy → Denoised → Original** side‑by‑side.  
+- Plotted training loss curve to visualize improvement.
+
+---
+
+## 🎯 Results
+- **High visual quality** — outputs closely match original images.  
+- **Low reconstruction error** — MAE and MSE confirm strong performance.  
+- Clear improvement shown through comparison visuals.
+
+---
+
+## 📂 Repository Contents
+- `data_preprocessing.py` — adding noise & splitting data  
+- `unet_model.py` — U‑Net implementation  
+- `train.py` — training loop & loss plotting  
+- `results/` — output images & evaluation plots
+
+---
+
+## 📸 Sample Output
+*(Noisy → Denoised → Original)*
+
+![Sample Output](results/sample.png)
+
+---
+
+## 🔗 Project Info
+**Repository Name:** `unet-cifar10-denoise`  
+**Short Description:** U‑Net model trained on CIFAR‑10 to remove Salt & Pepper noise, achieving high‑quality image restorations. Includes code, training logs, and visual comparisons.

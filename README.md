@@ -34,23 +34,6 @@ The model restores noisy images to clean, high‑quality outputs.
 - **Low reconstruction error** — MAE and MSE confirm strong performance.  
 - Clear improvement shown through comparison visuals.
 
----
-
-## 📂 Repository Contents
-- `data_preprocessing.py` — adding noise & splitting data  
-- `unet_model.py` — U‑Net implementation  
-- `train.py` — training loop & loss plotting  
-- `results/` — output images & evaluation plots
-
----
-
-## 📸 Sample Output
-*(Noisy → Denoised → Original)*
-
-![Sample Output](results/sample.png)
-
----
-
 ## 🔗 Project Info
 **Repository Name:** `unet-cifar10-denoise`  
 **Short Description:** U‑Net model trained on CIFAR‑10 to remove Salt & Pepper noise, achieving high‑quality image restorations. Includes code, training logs, and visual comparisons.

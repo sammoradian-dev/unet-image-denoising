@@ -18,7 +18,7 @@ The model restores noisy images to clean, high‑quality outputs.
 - Inputs: noisy images. Outputs: clean ground‑truth images.
 
 ### 3️⃣ Training  
-- Optimized using **MSE** and **MAE** loss functions.  
+- Optimized using **MSE** loss function.  
 - Trained on noisy–clean image pairs.  
 - Monitored loss values to ensure convergence.
 
@@ -31,7 +31,7 @@ The model restores noisy images to clean, high‑quality outputs.
 
 ## 🎯 Results
 - **High visual quality** — outputs closely match original images.  
-- **Low reconstruction error** — MAE and MSE confirm strong performance.  
+- **Low reconstruction error** — MSE confirms strong performance.  
 - Clear improvement shown through comparison visuals.
 
 ## 🔗 Project Info
